@@ -4,7 +4,7 @@ const takeScreenshot = async () => {
     const browser = await puppeteer.launch(); 
     const page = await browser.newPage();
     const options = { 
-       path: 'capturas/website.png',
+       path: 'pathDirectory/destinyFile.png',
        fullPage: true,
        omitBackground: false,
        
@@ -20,7 +20,7 @@ const doPdf = async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const options2 = {
-     path: 'pdf/web.pdf',
+     path: 'pathDirectory/destinyFile.pdf',
     }
     await page.goto('https://hackernoon.com/how-to-create-an-instagram-bot-with-node-js-a289185a7d6f', { waitUntil: 'networkidle2'});
     await page.pdf(options2);
